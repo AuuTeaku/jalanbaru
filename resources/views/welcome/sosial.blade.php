@@ -5,9 +5,8 @@
     <meta charset="utf-8">
     <title>JALAN BARU</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
-
+    <meta content="Jalan Baru" name="keywords">
+    <meta content="Jalan Baru menyediakan berbagai artikel lengkap dari mulai politik, ekonomi, sosial, dan sebagainya" name="description">
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
