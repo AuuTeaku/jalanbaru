@@ -72,29 +72,35 @@
                                 <div class="container">
                                     <div class="row">
                                         <?php $temp = 0; ?>
-                                        @foreach ($post as $p )
+                                        @foreach ($post as $p)
                                             @if ($p->category == 1 && $temp < 2)
                                                 <div class=" overflow-hidden col-sm-6" style="height: 300px;">
-                                                    <img class="img-fluid w-100 h-100" src="{{ asset('images/'.$p->picture) }}" style="object-fit: cover;">
+                                                    <img class="img-fluid w-100 h-100"
+                                                        src="{{ asset('images/' . $p->picture) }}"
+                                                        style="object-fit: cover;">
                                                     <div class="overlay">
                                                         <div class="mb-1" style="font-size: 13px;">
                                                             <a class="text-white" href="/politik">Politik</a>
                                                             <span class="px-1 text-white">/</span>
-                                                            <a class="text-white" href="">{{ $p->created_at->format('d M Y') }}</a>
+                                                            <a class="text-white"
+                                                                href="">{{ $p->created_at->format('d M Y') }}</a>
                                                         </div>
-                                                        <a class="h4 m-0 text-white" href="{{ route('post.show', $p->id) }}">{{ $p->title }}</a>
+                                                        <a class="h4 m-0 text-white"
+                                                            href="{{ route('post.show', $p->id) }}">{{ $p->title }}</a>
                                                     </div>
                                                 </div>
-                                                <?php $temp = $temp+1; ?>
-                                        @endif
+                                                <?php $temp = $temp + 1; ?>
+                                            @endif
                                         @endforeach
                                     </div>
-                                    
+
                                 </div>
-                                
+
                             </div>
-                        </div> 
-                        <div class="card-footer"><a href="/politik"><button type="button" class="w3-right w3-btn w3-white w3-border w3-border-black w3-round-large">Show More »</button></a></div>
+                        </div>
+                        <div class="card-footer"><a href="/politik"><button type="button"
+                                    class="w3-right w3-btn w3-white w3-border w3-border-black w3-round-large">Show More
+                                    »</button></a></div>
                     </div>
                     <hr>
                     <div class="card">
@@ -104,29 +110,35 @@
                                 <div class="container">
                                     <div class="row">
                                         <?php $temp = 0; ?>
-                                        @foreach ($post as $p )
+                                        @foreach ($post as $p)
                                             @if ($p->category == 2 && $temp < 2)
                                                 <div class=" overflow-hidden col-sm-6" style="height: 300px;">
-                                                    <img class="img-fluid w-100 h-100" src="{{ asset('images/'.$p->picture) }}" style="object-fit: cover;">
+                                                    <img class="img-fluid w-100 h-100"
+                                                        src="{{ asset('images/' . $p->picture) }}"
+                                                        style="object-fit: cover;">
                                                     <div class="overlay">
                                                         <div class="mb-1" style="font-size: 13px;">
                                                             <a class="text-white" href="/ekonomi">Ekonomi</a>
                                                             <span class="px-1 text-white">/</span>
-                                                            <a class="text-white" href="">{{ $p->created_at->format('d M Y') }}</a>
+                                                            <a class="text-white"
+                                                                href="">{{ $p->created_at->format('d M Y') }}</a>
                                                         </div>
-                                                        <a class="h4 m-0 text-white" href="{{ route('post.show', $p->id) }}">{{ $p->title }}</a>
+                                                        <a class="h4 m-0 text-white"
+                                                            href="{{ route('post.show', $p->id) }}">{{ $p->title }}</a>
                                                     </div>
                                                 </div>
-                                                <?php $temp = $temp+1; ?>
-                                        @endif
+                                                <?php $temp = $temp + 1; ?>
+                                            @endif
                                         @endforeach
                                     </div>
-                                    
+
                                 </div>
-                                
+
                             </div>
-                        </div> 
-                        <div class="card-footer"><a href="/ekonomi"><button type="button" class="w3-right w3-btn w3-white w3-border w3-border-black w3-round-large">Show More »</button></a></div>
+                        </div>
+                        <div class="card-footer"><a href="/ekonomi"><button type="button"
+                                    class="w3-right w3-btn w3-white w3-border w3-border-black w3-round-large">Show More
+                                    »</button></a></div>
                     </div>
                     <hr>
                     <div class="card">
@@ -136,29 +148,35 @@
                                 <div class="container">
                                     <div class="row">
                                         <?php $temp = 0; ?>
-                                        @foreach ($post as $p )
+                                        @foreach ($post as $p)
                                             @if ($p->category == 3 && $temp < 2)
                                                 <div class=" overflow-hidden col-sm-6" style="height: 300px;">
-                                                    <img class="img-fluid w-100 h-100" src="{{ asset('images/'.$p->picture) }}" style="object-fit: cover;">
+                                                    <img class="img-fluid w-100 h-100"
+                                                        src="{{ asset('images/' . $p->picture) }}"
+                                                        style="object-fit: cover;">
                                                     <div class="overlay">
                                                         <div class="mb-1" style="font-size: 13px;">
                                                             <a class="text-white" href="/sosial">Sosial</a>
                                                             <span class="px-1 text-white">/</span>
-                                                            <a class="text-white" href="">{{ $p->created_at->format('d M Y') }}</a>
+                                                            <a class="text-white"
+                                                                href="">{{ $p->created_at->format('d M Y') }}</a>
                                                         </div>
-                                                        <a class="h4 m-0 text-white" href="{{ route('post.show', $p->id) }}">{{ $p->title }}</a>
+                                                        <a class="h4 m-0 text-white"
+                                                            href="{{ route('post.show', $p->id) }}">{{ $p->title }}</a>
                                                     </div>
                                                 </div>
-                                                <?php $temp = $temp+1; ?>
-                                        @endif
+                                                <?php $temp = $temp + 1; ?>
+                                            @endif
                                         @endforeach
                                     </div>
-                                    
+
                                 </div>
-                                
-                            </div>    
-                        </div> 
-                        <div class="card-footer"><a href="/sosial"><button type="button" class="w3-right w3-btn w3-white w3-border w3-border-black w3-round-large">Show More »</button></a></div>
+
+                            </div>
+                        </div>
+                        <div class="card-footer"><a href="/sosial"><button type="button"
+                                    class="w3-right w3-btn w3-white w3-border w3-border-black w3-round-large">Show More
+                                    »</button></a></div>
                     </div>
                     <hr>
                     <div class="card">
@@ -168,29 +186,35 @@
                                 <div class="container">
                                     <div class="row">
                                         <?php $temp = 0; ?>
-                                        @foreach ($post as $p )
+                                        @foreach ($post as $p)
                                             @if ($p->category == 4 && $temp < 2)
                                                 <div class=" overflow-hidden col-sm-6" style="height: 300px;">
-                                                    <img class="img-fluid w-100 h-100" src="{{ asset('images/'.$p->picture) }}" style="object-fit: cover;">
+                                                    <img class="img-fluid w-100 h-100"
+                                                        src="{{ asset('images/' . $p->picture) }}"
+                                                        style="object-fit: cover;">
                                                     <div class="overlay">
                                                         <div class="mb-1" style="font-size: 13px;">
                                                             <a class="text-white" href="/lingkungan">Lingkungan</a>
                                                             <span class="px-1 text-white">/</span>
-                                                            <a class="text-white" href="">{{ $p->created_at->format('d M Y') }}</a>
+                                                            <a class="text-white"
+                                                                href="">{{ $p->created_at->format('d M Y') }}</a>
                                                         </div>
-                                                        <a class="h4 m-0 text-white" href="{{ route('post.show', $p->id) }}">{{ $p->title }}</a>
+                                                        <a class="h4 m-0 text-white"
+                                                            href="{{ route('post.show', $p->id) }}">{{ $p->title }}</a>
                                                     </div>
                                                 </div>
-                                                <?php $temp = $temp+1; ?>
-                                        @endif
+                                                <?php $temp = $temp + 1; ?>
+                                            @endif
                                         @endforeach
                                     </div>
-                                    
+
                                 </div>
-                                
-                            </div>    
-                        </div> 
-                        <div class="card-footer"><a href="/lingkungan"><button type="button" class="w3-right w3-btn w3-white w3-border w3-border-black w3-round-large">Show More »</button></a></div>
+
+                            </div>
+                        </div>
+                        <div class="card-footer"><a href="/lingkungan"><button type="button"
+                                    class="w3-right w3-btn w3-white w3-border w3-border-black w3-round-large">Show More
+                                    »</button></a></div>
                     </div>
                     <hr>
                     <div class="card">
@@ -200,29 +224,35 @@
                                 <div class="container">
                                     <div class="row">
                                         <?php $temp = 0; ?>
-                                        @foreach ($post as $p )
+                                        @foreach ($post as $p)
                                             @if ($p->category == 5 && $temp < 2)
                                                 <div class=" overflow-hidden col-sm-6" style="height: 300px;">
-                                                    <img class="img-fluid w-100 h-100" src="{{ asset('images/'.$p->picture) }}" style="object-fit: cover;">
+                                                    <img class="img-fluid w-100 h-100"
+                                                        src="{{ asset('images/' . $p->picture) }}"
+                                                        style="object-fit: cover;">
                                                     <div class="overlay">
                                                         <div class="mb-1" style="font-size: 13px;">
                                                             <a class="text-white" href="/pendidikan">Pendidikan</a>
                                                             <span class="px-1 text-white">/</span>
-                                                            <a class="text-white" href="">{{ $p->created_at->format('d M Y') }}</a>
+                                                            <a class="text-white"
+                                                                href="">{{ $p->created_at->format('d M Y') }}</a>
                                                         </div>
-                                                        <a class="h4 m-0 text-white" href="{{ route('post.show', $p->id) }}">{{ $p->title }}</a>
+                                                        <a class="h4 m-0 text-white"
+                                                            href="{{ route('post.show', $p->id) }}">{{ $p->title }}</a>
                                                     </div>
                                                 </div>
-                                                <?php $temp = $temp+1; ?>
-                                        @endif
+                                                <?php $temp = $temp + 1; ?>
+                                            @endif
                                         @endforeach
                                     </div>
-                                    
+
                                 </div>
-                                
-                            </div>    
-                        </div> 
-                        <div class="card-footer"><a href="/pendidikan"><button type="button" class="w3-right w3-btn w3-white w3-border w3-border-black w3-round-large">Show More »</button></a></div>
+
+                            </div>
+                        </div>
+                        <div class="card-footer"><a href="/pendidikan"><button type="button"
+                                    class="w3-right w3-btn w3-white w3-border w3-border-black w3-round-large">Show More
+                                    »</button></a></div>
                     </div>
                     <hr>
                     <div class="card">
@@ -232,29 +262,35 @@
                                 <div class="container">
                                     <div class="row">
                                         <?php $temp = 0; ?>
-                                        @foreach ($post as $p )
+                                        @foreach ($post as $p)
                                             @if ($p->category == 6 && $temp < 2)
                                                 <div class=" overflow-hidden col-sm-6" style="height: 300px;">
-                                                    <img class="img-fluid w-100 h-100" src="{{ asset('images/'.$p->picture) }}" style="object-fit: cover;">
+                                                    <img class="img-fluid w-100 h-100"
+                                                        src="{{ asset('images/' . $p->picture) }}"
+                                                        style="object-fit: cover;">
                                                     <div class="overlay">
                                                         <div class="mb-1" style="font-size: 13px;">
                                                             <a class="text-white" href="/lainnya">Lainnya</a>
                                                             <span class="px-1 text-white">/</span>
-                                                            <a class="text-white" href="">{{ $p->created_at->format('d M Y') }}</a>
+                                                            <a class="text-white"
+                                                                href="">{{ $p->created_at->format('d M Y') }}</a>
                                                         </div>
-                                                        <a class="h4 m-0 text-white" href="{{ route('post.show', $p->id) }}">{{ $p->title }}</a>
+                                                        <a class="h4 m-0 text-white"
+                                                            href="{{ route('post.show', $p->id) }}">{{ $p->title }}</a>
                                                     </div>
                                                 </div>
-                                                <?php $temp = $temp+1; ?>
-                                        @endif
+                                                <?php $temp = $temp + 1; ?>
+                                            @endif
                                         @endforeach
                                     </div>
-                                    
+
                                 </div>
-                                
-                            </div>    
-                        </div> 
-                        <div class="card-footer"><a href="/lainnya"><button type="button" class="w3-right w3-btn w3-white w3-border w3-border-black w3-round-large">Show More »</button></a></div>
+
+                            </div>
+                        </div>
+                        <div class="card-footer"><a href="/lainnya"><button type="button"
+                                    class="w3-right w3-btn w3-white w3-border w3-border-black w3-round-large">Show More
+                                    »</button></a></div>
                     </div>
                     <hr>
                 </div>
@@ -262,13 +298,17 @@
 
                 {{-- LEFT SIDE --}}
                 <div class="col-lg-4">
-                    <div class="container-lg mt-3 border">
-                        <div class="input-group mb-3 mt-3">
-                            <input type="text" class="form-control" placeholder="Search">
-                            <button class="btn btn-secondary " type="submit">
-                                <i class="fa fa-search"></i></button> 
-                          </div>
-                    </div>
+                    <form type="get" action="{{url('/search')}}">
+                        <div class="container-lg mt-3 border">
+                            <div class="input-group mb-3 mt-3">
+
+                                <input type="text" class="form-control" placeholder="Search" name="query">
+                                <button class="btn btn-secondary " type="submit">
+                                    <i class="fa fa-search"></i></button>
+
+                            </div>
+                        </div>
+                    </form>
                     <hr>
                     <div class="container-lg mt-3">
                         <div class="w3-card-4" style="width:100%;">
@@ -278,11 +318,12 @@
                             <div class="w3-container">
                                 <img src="{{ url('/images/jbi.png') }}" alt="Image" style="max-width: 100%" />
                             </div>
-                        
+
                             <footer class="w3-container">
                                 <h4><b>Jalan Baru</b></h4>
-                                <p>Berisi artikel lengkap seputar Islam Kaffah. Hubungi kami 
-                                    <a href="mailto: dalmawinter@gmail.com" style="color:blue; font-weight:700">di sini </a>
+                                <p>Berisi artikel lengkap seputar Islam Kaffah. Hubungi kami
+                                    <a href="mailto: dalmawinter@gmail.com" style="color:blue; font-weight:700">di
+                                        sini </a>
                                 </p>
                             </footer>
                         </div>
@@ -293,50 +334,40 @@
                             <div class="bg-light py-2 px-4 mb-3">
                                 <h3 class="m-0">Artikel Terbaru</h3>
                             </div>
-                            <div class="d-flex mb-3">
-                                <img src="{{ url('/images/jbi.png') }}" style="width: 100px; height: 100px; object-fit: cover;">
-                                <div class="w-100 d-flex flex-column justify-content-center bg-light px-3" style="height: 100px;">
-                                    <div class="mb-1" style="font-size: 13px;">
-                                        <a href="">Technology</a>
-                                        <span class="px-1">/</span>
-                                        <span>January 01, 2045</span>
+
+                            @php($i = 0)
+                            @foreach ($post as $p)
+                                @if ($i < 5)
+                                    <div class="d-flex mb-3">
+                                        <img src="{{ asset('images/' . $p->picture) }}"
+                                            style="width: 100px; height: 100px; object-fit: cover;">
+                                        <div class="w-100 d-flex flex-column justify-content-center bg-light px-3"
+                                            style="height: 100px;">
+                                            <div class="mb-1" style="font-size: 13px;">
+                                                <a href="#">
+                                                    @if ($p->category == 1)
+                                                        Politik
+                                                    @elseif ($p->category == 2)
+                                                        Ekonomi
+                                                    @elseif ($p->category == 3)
+                                                        Sosial
+                                                    @elseif ($p->category == 4)
+                                                        Lingkungan
+                                                    @elseif ($p->category == 5)
+                                                        Pendidikan
+                                                    @else
+                                                        Lainnya
+                                                    @endif
+                                                </a>
+                                                <span class="px-1">/</span>
+                                                <span>{{ $p->created_at->format('d M Y') }}</span>
+                                            </div>
+                                            <a class="h6 m-0" href="">{{ $p->title }}</a>
+                                        </div>
                                     </div>
-                                    <a class="h6 m-0" href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                </div>
-                            </div>
-                            <div class="d-flex mb-3">
-                                <img src="{{ url('/images/jbi.png') }}" style="width: 100px; height: 100px; object-fit: cover;">
-                                <div class="w-100 d-flex flex-column justify-content-center bg-light px-3" style="height: 100px;">
-                                    <div class="mb-1" style="font-size: 13px;">
-                                        <a href="">Technology</a>
-                                        <span class="px-1">/</span>
-                                        <span>January 01, 2045</span>
-                                    </div>
-                                    <a class="h6 m-0" href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                </div>
-                            </div>
-                            <div class="d-flex mb-3">
-                                <img src="{{ url('/images/jbi.png') }}" style="width: 100px; height: 100px; object-fit: cover;">
-                                <div class="w-100 d-flex flex-column justify-content-center bg-light px-3" style="height: 100px;">
-                                    <div class="mb-1" style="font-size: 13px;">
-                                        <a href="">Technology</a>
-                                        <span class="px-1">/</span>
-                                        <span>January 01, 2045</span>
-                                    </div>
-                                    <a class="h6 m-0" href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                </div>
-                            </div>
-                            <div class="d-flex mb-3">
-                                <img src="{{ url('/images/jbi.png') }}" style="width: 100px; height: 100px; object-fit: cover;">
-                                <div class="w-100 d-flex flex-column justify-content-center bg-light px-3" style="height: 100px;">
-                                    <div class="mb-1" style="font-size: 13px;">
-                                        <a href="">Technology</a>
-                                        <span class="px-1">/</span>
-                                        <span>January 01, 2045</span>
-                                    </div>
-                                    <a class="h6 m-0" href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                </div>
-                            </div>
+                                    @php($i += 1)
+                                @endif
+                            @endforeach
                         </div>
                     </div>
                     <hr>

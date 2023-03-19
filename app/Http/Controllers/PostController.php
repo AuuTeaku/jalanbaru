@@ -84,9 +84,21 @@ class PostController extends Controller
 
         $post = Post::findOrFail($id);
 
+        if($request->hasFile('picture')){
+            $request->validate([
+                'picture' => 'mimes:doc,pdf,docx,zip,jpeg,png,jpg,gif,svg|max:2048'
+            ]);
+            $img = $request->file('picture');
+            $ext = $img->getClientOriginalExtension();
+            $filenames = time().'.'.$ext;
+            $img->move('images/', $filenames);
+            
+        }
+
         $post->update([
             'title' => $request->title,
             'category' => $request->category,
+            'picture' => $filenames,
             'content' => $request->content,
             'status' => $request->status,
             'slug' => Str::slug($request->title)

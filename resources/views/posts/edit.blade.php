@@ -33,7 +33,7 @@
 
                 <div class="card border-0 shadow rounded">
                     <div class="card-body">
-                        <form action="{{ route('post.update', $post->id) }}" method="POST">
+                        <form action="{{ route('post.update', $post->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
 
@@ -61,7 +61,10 @@
                                     <option value="6" {{ $post->category == 6 ? 'selected':'' }}>Lainnya</option>
                                 </select>
                             </div>
-                            
+                            <div class="form-group">
+                                <label for="picture">Gambar <sub style="color:red">(Maks 2 MB)</sub></label>
+                                <input type="file" name="picture" id="picture" class="form-control" value="{{$post->picture}}">
+                            </div>
 
                             <div class="form-group">
                                 <label for="status">Publish Status</label>

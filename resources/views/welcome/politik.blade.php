@@ -115,13 +115,17 @@
 
                 {{-- LEFT SIDE --}}
                 <div class="col-lg-4">
-                    <div class="container-lg mt-3 border">
-                        <div class="input-group mb-3 mt-3">
-                            <input type="text" class="form-control" placeholder="Search">
-                            <button class="btn btn-secondary " type="submit">
-                                <i class="fa fa-search"></i></button>
+                    <form type="get" action="{{url('/search')}}">
+                        <div class="container-lg mt-3 border">
+                            <div class="input-group mb-3 mt-3">
+
+                                <input type="text" class="form-control" placeholder="Search" name="query">
+                                <button class="btn btn-secondary " type="submit">
+                                    <i class="fa fa-search"></i></button>
+
+                            </div>
                         </div>
-                    </div>
+                    </form>
                     <hr>
                     <div class="container-lg mt-3">
                         <div class="w3-card-4" style="width:100%;">
@@ -145,60 +149,41 @@
                     <div class="container-lg mt-3">
                         <div class="w3-card-4">
                             <div class="bg-light py-2 px-4 mb-3">
-                                <h3 class="m-0">Tranding</h3>
+                                <h3 class="m-0">Artikel Teratas</h3>
                             </div>
-                            <div class="d-flex mb-3">
-                                <img src="{{ url('/images/jbi.png') }}"
-                                    style="width: 100px; height: 100px; object-fit: cover;">
-                                <div class="w-100 d-flex flex-column justify-content-center bg-light px-3"
-                                    style="height: 100px;">
-                                    <div class="mb-1" style="font-size: 13px;">
-                                        <a href="">Technology</a>
-                                        <span class="px-1">/</span>
-                                        <span>January 01, 2045</span>
+                            @php($i = 0)
+                            @foreach ($pol as $p)
+                                @if ($i < 5)
+                                    <div class="d-flex mb-3">
+                                        <img src="{{ asset('images/' . $p->picture) }}"
+                                            style="width: 100px; height: 100px; object-fit: cover;">
+                                        <div class="w-100 d-flex flex-column justify-content-center bg-light px-3"
+                                            style="height: 100px;">
+                                            <div class="mb-1" style="font-size: 13px;">
+                                                <a href="">
+                                                    @if ($p->category == 1)
+                                                    Politik
+                                                @elseif ($p->category == 2)
+                                                    Ekonomi
+                                                @elseif ($p->category == 3)
+                                                    Sosial
+                                                @elseif ($p->category == 4)
+                                                    Lingkungan
+                                                @elseif ($p->category == 5)
+                                                    Pendidikan
+                                                @else
+                                                    Lainnya
+                                                @endif
+                                                </a>
+                                                <span class="px-1">/</span>
+                                                <span>{{ $p->created_at->format('d M Y') }}</span>
+                                            </div>
+                                            <a class="h6 m-0" href="">{{$p->title}}</a>
+                                        </div>
                                     </div>
-                                    <a class="h6 m-0" href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                </div>
-                            </div>
-                            <div class="d-flex mb-3">
-                                <img src="{{ url('/images/jbi.png') }}"
-                                    style="width: 100px; height: 100px; object-fit: cover;">
-                                <div class="w-100 d-flex flex-column justify-content-center bg-light px-3"
-                                    style="height: 100px;">
-                                    <div class="mb-1" style="font-size: 13px;">
-                                        <a href="">Technology</a>
-                                        <span class="px-1">/</span>
-                                        <span>January 01, 2045</span>
-                                    </div>
-                                    <a class="h6 m-0" href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                </div>
-                            </div>
-                            <div class="d-flex mb-3">
-                                <img src="{{ url('/images/jbi.png') }}"
-                                    style="width: 100px; height: 100px; object-fit: cover;">
-                                <div class="w-100 d-flex flex-column justify-content-center bg-light px-3"
-                                    style="height: 100px;">
-                                    <div class="mb-1" style="font-size: 13px;">
-                                        <a href="">Technology</a>
-                                        <span class="px-1">/</span>
-                                        <span>January 01, 2045</span>
-                                    </div>
-                                    <a class="h6 m-0" href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                </div>
-                            </div>
-                            <div class="d-flex mb-3">
-                                <img src="{{ url('/images/jbi.png') }}"
-                                    style="width: 100px; height: 100px; object-fit: cover;">
-                                <div class="w-100 d-flex flex-column justify-content-center bg-light px-3"
-                                    style="height: 100px;">
-                                    <div class="mb-1" style="font-size: 13px;">
-                                        <a href="">Technology</a>
-                                        <span class="px-1">/</span>
-                                        <span>January 01, 2045</span>
-                                    </div>
-                                    <a class="h6 m-0" href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                </div>
-                            </div>
+                                    @php($i += 1)
+                                @endif
+                            @endforeach
                         </div>
                     </div>
                     <hr>
